@@ -12,7 +12,8 @@ public class TestFirstRequirement{
     {
        ConversionTools instance = new();
 
-       instance.strVariable.Should().Be(entry);
+
+       instance.strVariable = entry;
        var strTypeCheck = instance.strVariable is string;
        strTypeCheck.Should().Be(true);
 
@@ -31,7 +32,7 @@ public class TestSecondRequirement{
     {
         ConversionTools instance = new();
 
-        instance.strVariable.Should().Be(entry);
+        instance.strVariable = entry;
         var strTypeCheck = instance.strVariable is string;
         strTypeCheck.Should().Be(true);
 
@@ -50,7 +51,7 @@ public class TestThirdRequirement{
     {
         ConversionTools instance = new();
 
-        instance.intVariable.Should().Be(entry);
+        instance.intVariable = entry;
         var intTypeCheck = instance.intVariable is int;
         intTypeCheck.Should().Be(true);
 

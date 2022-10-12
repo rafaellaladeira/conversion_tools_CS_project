@@ -10,7 +10,6 @@ public class ConversionTools
     public void ConvertStrToInt()
     {
         if(strVariable is string) intVariable = Convert.ToInt32(strVariable);
-        throw new NotImplementedException();
     }
 
     public void ConvertStrToDouble()

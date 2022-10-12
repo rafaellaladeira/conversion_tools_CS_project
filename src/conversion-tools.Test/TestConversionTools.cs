@@ -68,6 +68,16 @@ public class TestFourthRequirement{
     [InlineData(4.1, "4.1")]
     public void TestConvertDoubleToStr(double entry, string expected)
     {
-        throw new NotImplementedException();
+        ConversionTools instance = new();
+
+        instance.doubleVariable = entry;
+        var doubleTypeCheck = instance.doubleVariable is double;
+        doubleTypeCheck.Should().Be(true);
+
+        instance.ConvertDoubleToStr();
+
+        instance.strVariable.Should().Be(expected);
+        var strTypeCheck = instance.strVariable is string;
+        strTypeCheck.Should().Be(true);
     }
 }

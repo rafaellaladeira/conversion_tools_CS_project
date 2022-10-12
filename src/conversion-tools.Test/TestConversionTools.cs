@@ -48,7 +48,17 @@ public class TestThirdRequirement{
     [InlineData(1, "1")]
     public void TestConvertIntToStr(int entry, string expected)
     {
-        throw new NotImplementedException();
+        ConversionTools instance = new();
+
+        instance.intVariable.Should().Be(entry);
+        var intTypeCheck = instance.intVariable is int;
+        intTypeCheck.Should().Be(true);
+
+        instance.ConvertIntToStr();
+
+        instance.strVariable.Should().Be(expected);
+        var strTypeCheck = instance.strVariable is string;
+        strTypeCheck.Should().Be(true);
     }
 }
 

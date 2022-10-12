@@ -14,7 +14,8 @@ public class ConversionTools
 
     public void ConvertStrToDouble()
     {
-        throw new NotImplementedException();
+        if(strVariable is string) doubleVariable = Convert.ToDouble(strVariable);
+        
     }
 
     public void ConvertIntToStr()

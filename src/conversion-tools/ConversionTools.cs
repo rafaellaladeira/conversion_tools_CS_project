@@ -15,7 +15,6 @@ public class ConversionTools
     public void ConvertStrToDouble()
     {
         if(strVariable is string) doubleVariable = Convert.ToDouble(strVariable);
-        
     }
 
     public void ConvertIntToStr()
